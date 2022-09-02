@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Активность покупателей</title>
+    <!-- <meta name="viewport" content="width=device-width; initial-scale=1"> -->
+
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/bootstrap-theme.css">
+
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body>
+	<div class="head">
+	    <div class="row">
+		    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+		    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 dropdown">
+		    	<h3><span class="label label-warning">Система лояльности</span></h3>
+			    <select class="form-control" id="base" onchange="selcity()">
+			    	<option>Ring</option>
+			    	<option>BigPak</option>
+			    </select>
+		    </div>
+		    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		    	<h3><span class="label label-warning">Город</span></h3>
+			    <select class="form-control" id="point">
+			    	<option >Все</option>
+			    </select>
+		    </div>
+		</div>
+
+		<br>
+
+		<div class="row">
+		    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+		    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 dropdown">
+		    	<h3><span class="label label-warning">С</span></h3>
+		    	<input type="date" class="form-control" id="date1">
+		    </div>
+		    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		    	<h3><span class="label label-warning">До</span></h3>
+		    	<input type="date" class="form-control" id="date2">
+		    </div>
+		    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 dropdown">
+		    	<h3><span class="label label-warning">Сортировать по</span></h3>
+			    <select class="form-control" id="sort">
+			    	<option>Чек</option>
+			    	<option>Бонусы</option>
+			    	<option>Покупка</option>
+			    </select>
+		    </div>
+		</div>
+
+		<br>
+
+		<div class="row">
+		    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+		    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 dropdown"></div>
+		    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"> </div>
+		    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 dropdown">
+		    	<button type="button" class="btn btn-success btn-lg" onclick="selshop()">Сформировать</button>
+		    </div>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="body">
+		<div class="row">
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<th class="success">Клиент</th>
+						<th class="success">Количество чеков</th>
+						<th class="success">Сумма бонусов</th>
+						<th class="success">Сумма покупок</th>
+					</thead>
+					<tbody id="report"></tbody>
+				</table>
+			</div>
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+		</div>
+	</div>
+
+    <script src="src/js/jquery-3.3.1.min.js"></script>
+    <script src="src/js/bootstrap.min.js"></script>
+    <script src="scripts/shop.js"></script>
+</body>
+</html>
